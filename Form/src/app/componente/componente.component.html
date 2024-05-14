@@ -1,0 +1,41 @@
+
+<div class="container mt-5">
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+      <form #contactForm (ngSubmit)="onSubmit()">
+        <div class="form-group">
+          <label for="name" class="form-label">Nombre:</label>
+          <input placeholder="Nombre" type="text" class="form-control" id="name" name="nombre" [(ngModel)]="nombre" required>
+        </div>
+        <div class="form-group">
+          <label for="email" class="form-label">Correo electrónico:</label>
+          <input placeholder="Correo" type="email" class="form-control" id="email" name="email" [(ngModel)]="email" required email>
+        </div>
+        <div class="form-group">
+          <label for="telefono" class="form-label"> Teléfono:</label>
+          <input placeholder="Teléfono" type="text" class="form-control" id="telefono" name="telefono" [(ngModel)]="telefono" required email>
+        </div>
+        <div class="form-group">
+          <label for="email" class="form-label">Dirección:</label>
+          <input placeholder="Dirección" type="text" class="form-control" id="dirección" name="direccion" [(ngModel)]="direccion" required direccion>
+        </div>
+        <button (click)="reset()" (click)="texto()" type="submit" class="btn btn-primary mt-4 w-100">Enviar</button>
+      </form>
+    </div>
+  </div>
+</div>
+<!--Siempre que se utilice un [(ngModel)] es importante que tambien se declare el atribito name= "" Junto con su valor en este caso el valor seria nombre y email   -->
+
+
+
+<!--<div class="container">
+
+<h1>Hola Mundo</h1>
+
+<p > {{parrafo}} </p>
+
+
+<div (click)="Ntexto()" class="d-flex justify-content-center">
+  <button class="btn btn-primary">Mi botón</button>
+</div>
+</div>-->
