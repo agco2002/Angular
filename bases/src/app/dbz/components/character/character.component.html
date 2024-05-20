@@ -1,12 +1,27 @@
 <h4>Agregar Personaje </h4>
     <!--Formulario-->
-    <form class="row">
+    <form class="row" (ngSubmit)="emitCharacter() ">
 
-      <input type="text"   class="form-control mb-2"  placeholder="Nombre">
+      <input
+      type="text"
+      name="name"
+      [(ngModel)]="character.name"
+      class="form-control mb-2"
+      placeholder="Nombre">
 
-      <input type="number" class="form-control mb-2"   placeholder="Poder" >
+      <input
+      type="number"
+      name="power"
+      [(ngModel)]="character.power"
+      class="form-control mb-2"
+      placeholder="Poder" >
 
       <button type="submit" class="btn btn-primary">
         Agregar
       </button>
+
+      <!-- <pre> {{character| json}}</pre> -->
+
     </form>
+
+ <!--- [(ngModel)]="character.name" con este codigo cuando nuestro input cambie va actualizar la referencia de los elementos del archivo character.component.ts-->

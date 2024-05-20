@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { Character } from '../interfaces/character.interface';
 
 
+
 @Component({
   selector: 'app-dbz-main-page',
   templateUrl: './main-page.component.html'
@@ -9,13 +10,21 @@ import { Character } from '../interfaces/character.interface';
 
 export class MainPageComponent {
   //Arreglo de personajes
-//importamos la interface Character
-  public character: Character[] = [{
-    name: 'Krillin',
-    power: 1000
-  },{
-    name: 'Goku',
-    power: 9500
-  }];
+//importamos la interface "Character"
+public character: Character[] = [{
+  name: 'Krillin',
+  power: 1000,
+},{
 
+ name: 'Goku',
+ power: 9500,
+},{
+  name: 'Vegeta',
+  power: 7500,
+}];
+
+onNewCharacter(character: Character): void {
+  this.character.push(character);
+
+ }
 }
