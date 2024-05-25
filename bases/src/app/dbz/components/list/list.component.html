@@ -22,8 +22,8 @@
             <strong> Power: </strong>
             <span>({{character.power}})</span>
           </div>
-
-            <button class="btn btn-danger ">X</button>
+          <!--Botón eliminar personaje-->
+            <button (click)="onDeleteCharacter(character.id)" class="btn btn-danger ">X</button>
 
 
       </li>
